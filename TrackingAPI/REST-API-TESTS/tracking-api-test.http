@@ -1,0 +1,42 @@
+@baseUrl = https://localhost:7165/api
+
+### Get all issues
+GET {{baseUrl}}/Issue
+Content-Type: application/json
+
+### Get issue by id
+# issue
+# @name issueAPI
+GET {{baseUrl}}/Issue/1
+Content-Type: application/json
+
+### Create an issue
+POST {{baseUrl}}/Issue
+Content-Type: application/json
+
+{
+  "title": "new bug",
+  "description": "new bug desc",
+  "priority": 2,
+  "issueType": 1,
+  "created": "2023-09-25T20:45:31.657Z",
+  "completed": "2023-09-25T20:45:31.657Z"
+}
+
+### Update an issue
+PUT {{baseUrl}}/Issue/3
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "updated bug",
+  "description": "updated bug desc",
+  "priority": 2,
+  "issueType": 1,
+  "created": "2023-09-25T20:45:31.657Z",
+  "completed": "2023-09-25T20:45:31.657Z"
+}
+
+### Delete an issue
+DELETE {{baseUrl}}/Issue/3
+Content-Type: application/json
